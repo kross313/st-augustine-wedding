@@ -1,94 +1,54 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Colleen & Spencer — St. Augustine Wedding Weekend</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Colleen & Spencer’s Wedding Weekend</title>
 <style>
-:root{--navy:#123f69;--cream:#fbfaf6;--green:#25744d;--purple:#6042a6;--ink:#172033;--muted:#667085;--line:#e5e7eb}
-*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink)}
-.hero{background:var(--navy);color:white;padding:34px 20px}.wrap{max-width:1100px;margin:auto}
-h1{font-family:Georgia,serif;margin:0 0 8px;font-size:clamp(30px,5vw,52px)} h2{font-family:Georgia,serif;font-size:30px;margin:0 0 16px}
-.sub{font-size:18px;opacity:.92}.tabs{position:sticky;top:0;background:white;border-bottom:1px solid var(--line);z-index:2}
-.tabs .wrap{display:flex;gap:8px;overflow:auto;padding:10px 16px}.tabs a{white-space:nowrap;text-decoration:none;color:var(--ink);font-weight:700;padding:10px 14px;border-radius:999px;background:#f1f4f7}
-section{padding:34px 18px}.intro{font-size:18px;line-height:1.55;max-width:850px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px}
-.card{background:white;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 3px 12px #0000000b}
-.card h3{margin:0 0 8px;font-size:20px}.price{font-size:22px;font-weight:800;margin:10px 0}.small{color:var(--muted);line-height:1.45}
-.btn{display:inline-block;margin-top:12px;padding:11px 15px;border-radius:9px;background:var(--navy);color:white;text-decoration:none;font-weight:800}
-.green .btn{background:var(--green)} .purple .btn{background:var(--purple)}
-.schedule{display:grid;grid-template-columns:120px 1fr;gap:10px 18px;margin:22px 0}.time{font-weight:800;color:var(--navy)}
-.map{background:#e8f0f4;border-radius:18px;min-height:350px;padding:28px;position:relative;overflow:hidden;border:1px solid #d8e2e8}
-.map:before{content:"";position:absolute;inset:12% 15%;border:3px dashed #e64c5b;border-radius:46% 42% 48% 44%;background:#ef798622}
-.map h3,.map p{position:relative;z-index:1}.pins{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
-.pin{background:white;padding:10px;border-radius:10px;font-weight:700;border-left:6px solid var(--navy)}
-.callout{background:#edf8f1;border-left:5px solid var(--green);padding:18px;border-radius:10px;margin:18px 0}
-.pair{border:2px solid #b7dec8}.pair-total{font-size:25px;font-weight:900;color:var(--green)}
-footer{padding:30px 18px;color:var(--muted);text-align:center;font-size:13px}
-@media(max-width:600px){.schedule{grid-template-columns:90px 1fr}.pins{grid-template-columns:1fr}}
+  *{box-sizing:border-box} body{margin:0;background:#eef3f8;font-family:Arial,sans-serif;color:#0b3b76}
+  .wrap{max-width:1484px;margin:0 auto;background:white;box-shadow:0 6px 28px #0002}
+  .note{padding:10px 16px;background:#062f63;color:#fff;text-align:center;font-weight:700;font-size:14px}
+  .board{position:relative;width:100%;line-height:0}
+  .board img{display:block;width:100%;height:auto}
+  .hotspot{position:absolute;display:block;border-radius:4px;line-height:normal;outline:0}
+  .hotspot:hover,.hotspot:focus{background:rgba(0,102,204,.12);box-shadow:inset 0 0 0 2px rgba(0,102,204,.55)}
+  .hotspot::after{content:"Open Vrbo ↗";position:absolute;right:3px;top:50%;transform:translateY(-50%);background:#fff;color:#075cb8;border:1px solid #8ab7e5;border-radius:10px;padding:2px 5px;font:700 9px Arial;opacity:0;white-space:nowrap;line-height:1.2}
+  .hotspot:hover::after,.hotspot:focus::after{opacity:1}
+  .missing{position:absolute;right:1.6%;bottom:.9%;font-size:11px;line-height:1.35;background:#fffde8;border:1px solid #e2c15c;color:#604b00;padding:5px 8px;border-radius:5px}
+  @media(max-width:700px){.note{font-size:12px}.hotspot::after{display:none}.missing{font-size:8px}}
 </style>
 </head>
 <body>
-<header class="hero"><div class="wrap">
-<h1>Colleen & Spencer’s Wedding Weekend</h1>
-<div class="sub">St. Augustine, Florida · January 29–30, 2027</div>
-</div></header>
-<nav class="tabs"><div class="wrap">
-<a href="#overview">Weekend + Hotels</a><a href="#two">Option A: Two Places</a><a href="#one">Option B: One Big House</a>
-</div></nav>
+<div class="wrap">
+  <div class="note">Click a rental name in the table to open its Vrbo listing.</div>
+  <div class="board">
+    <img src="wedding-map.png" alt="Colleen and Spencer wedding weekend map and vacation rental options">
 
-<section id="overview"><div class="wrap">
-<h2>Wedding Weekend + Where Everything Is</h2>
-<div class="schedule">
-<div class="time">FRI · 7–10 PM</div><div><b>Welcome Party</b><br>River House Events · 179 Marine St.</div>
-<div class="time">SAT · 2–3 PM</div><div><b>Ceremony</b><br>Cathedral Basilica of St. Augustine · 38 Cathedral Place</div>
-<div class="time">SAT · 3–5 PM</div><div><b>Break</b><br>Time to head back, relax and get ready for the evening.</div>
-<div class="time">SAT · 5–10 PM</div><div><b>Cocktail Hour + Reception</b><br>Lightner Museum · 75 King St.</div>
+    <!-- Left column rows 1–11. Percent coordinates keep links aligned responsively. -->
+    <a class="hotspot" aria-label="The Fitzgerald Mansion on Vrbo" href="https://www.vrbo.com/5107198?regionId=6339215&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=8" target="_blank" rel="noopener" style="left:58.0%;top:42.0%;width:18.2%;height:3.7%"></a>
+    <a class="hotspot" aria-label="Sorrento Home on Vrbo" href="https://www.vrbo.com/20129687ha?regionId=553248621532654278&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=2&children=1_17" target="_blank" rel="noopener" style="left:58.0%;top:46.0%;width:18.2%;height:3.7%"></a>
+    <a class="hotspot" aria-label="Pool Fire Pit Game Room on Vrbo" href="https://www.vrbo.com/5248293?regionId=6047864&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=2" target="_blank" rel="noopener" style="left:58.0%;top:50.0%;width:18.2%;height:3.7%"></a>
+    <a class="hotspot" aria-label="4BR Historic Old Town on Vrbo" href="https://www.vrbo.com/2718182?regionId=553248635976478447&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=8" target="_blank" rel="noopener" style="left:58.0%;top:58.0%;width:18.2%;height:3.7%"></a>
+    <a class="hotspot" aria-label="Beautiful Heated Pool Family House on Vrbo" href="https://www.vrbo.com/2105194?regionId=811713607485419520&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=8" target="_blank" rel="noopener" style="left:58.0%;top:62.0%;width:18.2%;height:3.7%"></a>
+    <a class="hotspot" aria-label="F3 Downtown on Vrbo" href="https://www.vrbo.com/878788?regionId=553248635976478447&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=2&children=1_17%2C1_17" target="_blank" rel="noopener" style="left:58.0%;top:66.0%;width:18.2%;height:3.7%"></a>
+    <a class="hotspot" aria-label="F2 Downtown on Vrbo" href="https://www.vrbo.com/1179846?regionId=553248635976478447&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=2&children=1_17%2C1_17" target="_blank" rel="noopener" style="left:58.0%;top:70.0%;width:18.2%;height:3.7%"></a>
+    <a class="hotspot" aria-label="Old City Garden Retreat on Vrbo" href="https://www.vrbo.com/2891832?regionId=553248635976478447&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=2&children=1_17%2C1_17" target="_blank" rel="noopener" style="left:58.0%;top:74.0%;width:18.2%;height:3.7%"></a>
+    <a class="hotspot" aria-label="Soaking Pool Game Room on Vrbo" href="https://www.vrbo.com/4542223?regionId=6047864&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=4&children=1_17%2C1_17%2C1_17%2C1_17" target="_blank" rel="noopener" style="left:58.0%;top:78.0%;width:18.2%;height:3.7%"></a>
+    <a class="hotspot" aria-label="Pristine Family Retreat on Vrbo" href="https://www.vrbo.com/4731429?regionId=6047864&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=4&children=1_17%2C1_17%2C1_17%2C1_17" target="_blank" rel="noopener" style="left:58.0%;top:82.0%;width:18.2%;height:3.7%"></a>
+
+    <!-- Right column rows 12–22 -->
+    <a class="hotspot" aria-label="Historic Hideaway on Vrbo" href="https://www.vrbo.com/3768745?regionId=553248635976478447&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=4&children=1_17%2C1_17%2C1_17%2C1_17" target="_blank" rel="noopener" style="left:78.0%;top:42.0%;width:19.0%;height:3.7%"></a>
+    <a class="hotspot" aria-label="Plunge Pool Walk Downtown on Vrbo" href="https://www.vrbo.com/4219916?regionId=6047864&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=4&children=1_17%2C1_17%2C1_17%2C1_17" target="_blank" rel="noopener" style="left:78.0%;top:46.0%;width:19.0%;height:3.7%"></a>
+    <a class="hotspot" aria-label="Mid-mod Boho Home on Vrbo" href="https://www.vrbo.com/3801044?regionId=6047864&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=4&children=1_17%2C1_17%2C1_17%2C1_17" target="_blank" rel="noopener" style="left:78.0%;top:50.0%;width:19.0%;height:3.7%"></a>
+    <a class="hotspot" aria-label="5 Min Walk to St George Street on Vrbo" href="https://www.vrbo.com/4602870?regionId=6047864&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=4&children=1_17%2C1_17%2C1_17%2C1_17" target="_blank" rel="noopener" style="left:78.0%;top:54.0%;width:19.0%;height:3.7%"></a>
+    <a class="hotspot" aria-label="Southern Comfort on Vrbo" href="https://www.vrbo.com/2819910?regionId=6047864&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=4&children=1_17%2C1_17%2C1_17%2C1_17" target="_blank" rel="noopener" style="left:78.0%;top:58.0%;width:19.0%;height:3.7%"></a>
+    <a class="hotspot" aria-label="Walk to Historic Downtown on Vrbo" href="https://www.vrbo.com/4898332?regionId=6047864&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=4&children=1_17%2C1_17%2C1_17%2C1_17" target="_blank" rel="noopener" style="left:78.0%;top:62.0%;width:19.0%;height:3.7%"></a>
+    <a class="hotspot" aria-label="The Royal Floridian on Vrbo" href="https://www.vrbo.com/4589885?regionId=6069639&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=5&children=1_17%2C1_17%2C1_17%2C1_17" target="_blank" rel="noopener" style="left:78.0%;top:70.0%;width:19.0%;height:3.7%"></a>
+    <a class="hotspot" aria-label="Blue Heron on Vrbo" href="https://www.vrbo.com/3001214?regionId=6069643&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=4&children=1_17%2C1_17%2C1_17%2C1_17" target="_blank" rel="noopener" style="left:78.0%;top:74.0%;width:19.0%;height:3.7%"></a>
+    <a class="hotspot" aria-label="The May House on Vrbo" href="https://www.vrbo.com/4529577?regionId=6069643&chkin=2027-01-28&chkout=2027-01-31&useRewards=false&adults=4&children=1_17%2C1_17%2C1_17%2C1_17" target="_blank" rel="noopener" style="left:78.0%;top:82.0%;width:19.0%;height:3.7%"></a>
+
+    <div class="missing">19 listings linked • 3 still need URLs: Haven Tiny House, Waterfront Oasis, The Daydream</div>
+  </div>
 </div>
-
-<div class="map">
-<h3>Our target area</h3><p>Stay in the Historic District / Lincolnville area so the wedding weekend is easy on foot.</p>
-<div class="pins">
-<div class="pin">📍 River House Events<br><span class="small">Friday welcome party</span></div>
-<div class="pin">⛪ Cathedral Basilica<br><span class="small">Saturday ceremony</span></div>
-<div class="pin">🏛 Lightner Museum<br><span class="small">Cocktail hour + reception</span></div>
-<div class="pin">🏨 Hotels + rentals<br><span class="small">Focus on the walkable core</span></div>
-</div></div>
-
-<h2 style="margin-top:28px">Recommended Hotels</h2>
-<div class="grid">
-<div class="card"><h3>Casa Monica Resort & Spa</h3><div class="price">$600/night · $1,800 / 3 nights</div><div class="small">Premium location. Bride, groom and close family are staying here. Across from the Lightner area and close to the Cathedral.</div><a class="btn" href="https://www.marriott.com/en-us/hotels/jaxak-casa-monica-resort-and-spa-autograph-collection/" target="_blank">View Hotel</a></div>
-<div class="card"><h3>AC Hotel St. Augustine Downtown</h3><div class="price">$300/night · $900 / 3 nights</div><div class="small">Wedding-site hotel option and a strong price benchmark for comparing the rentals.</div><a class="btn" href="https://www.marriott.com/" target="_blank">View Hotel</a></div>
-<div class="card"><h3>Renaissance St. Augustine Historic Downtown</h3><div class="price">$300/night · $900 / 3 nights</div><div class="small">Same nightly price as AC; useful alternative in the Historic District.</div><a class="btn" href="https://www.marriott.com/" target="_blank">View Hotel</a></div>
-</div>
-</div></section>
-
-<section id="two" class="green"><div class="wrap">
-<h2>Option A — Two Places Near Each Other</h2>
-<p class="intro">Instead of one expensive house, split into two nearby rentals around $350/night or less each. The strongest find so far is especially good because these two apartments are in the <b>same historic building</b> and share the pool.</p>
-<div class="callout"><b>Best pairing so far: F2 + F3</b><br>Same property/building in historic Lincolnville → the group can split into two units without really being separated.</div>
-<div class="grid">
-<div class="card pair"><h3>F2 — Downtown St. Augustine</h3><div class="price">$222/night · $666 / 3 nights</div><div class="small">1 bedroom · 1 bath · sleeps 4 · pool · kitchen · free onsite parking. Vrbo says Lightner Museum is about a 6-minute walk.</div><a class="btn" href="https://www.vrbo.com/1179846" target="_blank">View on Vrbo</a></div>
-<div class="card pair"><h3>F3 — Downtown St. Augustine</h3><div class="price">$229/night · $687 / 3 nights</div><div class="small">Downtown Lincolnville · pool · kitchen · free onsite parking. Located in the same renovated historic building as the related F units.</div><a class="btn" href="https://www.vrbo.com/878788" target="_blank">View on Vrbo</a></div>
-</div>
-<div class="callout"><div class="pair-total">$1,353 total for both / 3 nights</div><b>$451/night combined · sleeps up to 8 total</b><br><span class="small">This is the type of pairing we want to compare against two hotel rooms: two private spaces, but essentially next door to each other.</span></div>
-
-<h3>Other under-$350/night candidates from the saved list</h3>
-<div class="grid">
-<div class="card"><h3>Old City Garden Retreat</h3><div class="price">$320/night · $959 total</div><div class="small">3 bedrooms · sleeps 8 · screened porch · walk-to-historic-district listing.</div><a class="btn" href="https://www.vrbo.com/2891832" target="_blank">View on Vrbo</a></div>
-<div class="card"><h3>Charming 3BR + Soaking Pool/Game Room</h3><div class="price">$278/night · $834 total</div><div class="small">3 bedrooms · 2.5 baths · sleeps 8 · pool + game room. Better as a value option; listing describes Historic District as a short drive rather than a prime walking location.</div><a class="btn" href="https://www.vrbo.com/4542223" target="_blank">View on Vrbo</a></div>
-<div class="card"><h3>Pristine Family & Pet Retreat + EV Charger</h3><div class="price">$313/night · $939 total</div><div class="small">Saved candidate for a second-house pairing.</div><a class="btn" href="https://www.vrbo.com/4731429" target="_blank">View on Vrbo</a></div>
-</div>
-</div></section>
-
-<section id="one" class="purple"><div class="wrap">
-<h2>Option B — One Great House for Everyone</h2>
-<p class="intro">Spend more on one nicer house so everyone stays together. This section is about space, shared living areas, pools/outdoor areas and whether the house is still convenient for the wedding.</p>
-<div class="grid">
-<div class="card"><h3>The Fitzgerald Mansion · Luxury · Pool & Spa</h3><div class="price">$1,424/night · $4,273 / 3 nights</div><div class="small">5 bedrooms · 3+ bathrooms · sleeps 13. Luxury benchmark with pool/spa and room for the whole group.</div><a class="btn" href="https://www.vrbo.com/5107198" target="_blank">View on Vrbo</a></div>
-<div class="card"><h3>Sail Away · Heated Pool</h3><div class="price">$459/night · $1,376 / 3 nights</div><div class="small">4 bedrooms · 2 bathrooms · sleeps 12 · heated pool · foosball · pet friendly.</div><a class="btn" href="https://www.vrbo.com/2724540" target="_blank">View on Vrbo</a></div>
-<div class="card"><h3>4BR Historic Old Town</h3><div class="price">$377/night · $1,130 / 3 nights</div><div class="small">4 bedrooms · 2 bathrooms · sleeps 10 · 3 private parking spots · listing specifically highlights walking to sights.</div><a class="btn" href="https://www.vrbo.com/2718182" target="_blank">View on Vrbo</a></div>
-<div class="card"><h3>Historic Hideaway · Coastal Haven</h3><div class="price">$684/night · $2,051 / 3 nights</div><div class="small">4 bedrooms · 2+ bathrooms · sleeps 8 · pool · spacious · walkable.</div><a class="btn" href="https://www.vrbo.com/3768745" target="_blank">View on Vrbo</a></div>
-</div>
-</div></section>
-<footer>Wedding lodging comparison · Prices shown are the saved Jan. 28–31, 2027 rates and may change before booking.</footer>
-</body></html>
+</body>
+</html>
